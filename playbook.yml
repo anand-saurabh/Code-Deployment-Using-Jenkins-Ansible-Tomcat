@@ -1,0 +1,10 @@
+---
+- name: “playbook deploy”
+  hosts: 127.0.0.1
+  become: true
+  connection: local
+  tasks:
+    - name: copy war into tomcat
+      copy:
+        src: C:\Program Files (x86)\Jenkins\workspace\Sample Maven Project\target\issue-0.0.1-SNAPSHOT.war
+        dest: C:\Users\saura\Downloads\apache-tomcat-8.5.54-windows-x64\apache-tomcat-8.5.54\webapps
